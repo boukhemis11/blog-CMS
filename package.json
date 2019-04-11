@@ -1,0 +1,20 @@
+{
+  "name": "blog-cms",
+  "version": "1.0.0",
+  "description": "CMS based on the MEAN stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Mongo",
+    "Express",
+    "Angular",
+    "Node"
+  ],
+  "author": "boukhemis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
