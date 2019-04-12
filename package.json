@@ -4,7 +4,7 @@
   "description": "CMS based on the MEAN stack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon app.js"
   },
   "keywords": [
     "Mongo",
@@ -15,6 +15,7 @@
   "author": "boukhemis",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4"
   }
 }
