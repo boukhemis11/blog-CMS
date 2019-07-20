@@ -36,9 +36,23 @@ router.post('/blog-posts', (req, res) => {
 		}
 		res.json(blogschema);
 	});
-
+});
+  
+router.delete('/blog-posts/:id', (req, res) => {
+	const id = req.params.id;
+	Blogschema.findByIdAndDelete(id, (err, blogschema) => {
+		if(err){
+			return res.status(500).json(err);
+		}
+		res.status(500).json({
+			message: `blog post with id ${blogschema._id} deleted`,
+		});
+	});
 
 });
+
+
+
 
 module.exports = router;
 
