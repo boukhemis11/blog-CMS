@@ -15,6 +15,12 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(cors());
 app.use('/api/v1', api);
 
+app.use(function (req, res) {
+	const err = new Error('404 - Not found');
+	err.status = 404;
+	res.json(err);
+});
+
 mongoose.connect('mongodb://localhost:27017/blog', {useNewUrlParser:true});
 connection.on('error', (err) => {
 	console.log(`connection to mongoDB error: ${err.message}`);
