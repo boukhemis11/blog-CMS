@@ -8,12 +8,16 @@ import { BlogpostComponent } from './blogpost/blogpost.component';
 import { BlogpostListComponent } from './blogpost-list/blogpost-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogpostComponent,
-    BlogpostListComponent
+    BlogpostListComponent,
+    ErrorPageComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

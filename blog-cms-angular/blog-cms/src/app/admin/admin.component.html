@@ -1,0 +1,8 @@
+<mat-selection-list #blogPost$>
+    <mat-list-option *ngFor="let blogpost of blogPostList$ | async" [value]="blogpost._id">
+        {{ blogpost.title }}
+    </mat-list-option>
+  </mat-selection-list>
+
+    <button class="btnDelete" mat-raised-button color="accent" (click)="goBack()">Delete</button>
+

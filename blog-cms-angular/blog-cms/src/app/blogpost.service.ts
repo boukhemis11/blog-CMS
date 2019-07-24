@@ -17,6 +17,9 @@ export class BlogpostService {
 
   blogPostById(id: string): Observable<Blogpost> {
     return this.htppClient.get<Blogpost>(`${this.baseUrl}/${id}`);
+  }
 
+  deleteSinglePost(id: string): Observable<Blogpost> {
+    return this.htppClient.delete<Blogpost>(`${this.baseUrl}/${id}`);
   }
 }

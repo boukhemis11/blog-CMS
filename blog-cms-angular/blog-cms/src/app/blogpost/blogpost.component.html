@@ -1,4 +1,5 @@
-<mat-card *ngIf="(blogPost$ | async) as bp; else loading">
+<button class="btnBack" mat-raised-button color="accent" (click)="goBack()">Back</button>
+<mat-card *ngIf="(blogPost$ | async) as bp; else loading" class="blog-item">
     <mat-card-header  class="no-margin">
       <mat-card-title>{{ bp.title }}</mat-card-title>
       <mat-card-subtitle>{{ bp.subTitle }}</mat-card-subtitle>
