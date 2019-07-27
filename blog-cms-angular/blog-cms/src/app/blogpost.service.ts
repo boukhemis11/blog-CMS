@@ -19,7 +19,12 @@ export class BlogpostService {
     return this.htppClient.get<Blogpost>(`${this.baseUrl}/${id}`);
   }
 
-  deleteSinglePost(id: string): Observable<Blogpost> {
+  deleteSingleBlogpost(id: string): Observable<Blogpost> {
     return this.htppClient.delete<Blogpost>(`${this.baseUrl}/${id}`);
+  }
+
+  deleteBlogposts(ids: string[]): Observable<Blogpost> {
+    const allids = ids.join(',');
+    return this.htppClient.delete<Blogpost>(`${this.baseUrl}/?ids=${allids}`);
   }
 }

@@ -4,5 +4,7 @@ mat-selection-list {
 }
 
 .btnDelete {
-    margin: 1%
+    margin: 1%;
+    background-color: black;
+    color: aliceblue;
 }
