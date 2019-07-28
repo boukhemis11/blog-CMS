@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormGroupDirective, Validators } from '@angular/forms';
 import { BlogpostService } from '../blogpost.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blogpost-create',
@@ -15,7 +16,7 @@ export class BlogpostCreateComponent implements OnInit {
   content: '';
 
 
-  constructor(private fb: FormBuilder, private blogpostService: BlogpostService) { }
+  constructor(private fb: FormBuilder, private blogpostService: BlogpostService, private router: Router) { }
 
   ngOnInit() {
     this.createForm();
@@ -30,7 +31,7 @@ export class BlogpostCreateComponent implements OnInit {
   }
 
   createBlogpost(formDirective: FormGroupDirective) {
-    if(this.creationForm.valid) {
+    if (this.creationForm.valid) {
       this.blogpostService
         .createBlogpost(this.creationForm.value)
         .subscribe(data => this.handleSuccess(data, formDirective), error => this.handleError(error));
@@ -41,7 +42,7 @@ export class BlogpostCreateComponent implements OnInit {
     console.log('OK handleSuccess - blog post created', data);
     this.creationForm.reset();
     formDirective.resetForm();
-    this.blogpostService.dispatchBlogpostCreated(data._id);
+    this.router.navigate(['/admin']);
   }
 
   handleError(error) {
