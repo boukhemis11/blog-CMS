@@ -45,7 +45,7 @@ router.delete('/blog-posts/:id', (req, res) => {
 		if(err){
 			return res.status(500).json(err);
 		}
-		res.status(500).json({
+		res.status(202).json({
 			message: `blog post with id ${blogschema._id} deleted`,
 		});
 	});
