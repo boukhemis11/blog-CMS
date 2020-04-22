@@ -29,13 +29,13 @@ router.get('/blog-posts/:id', (req, res) => {
 });
 
 router.post('/blog-posts', (req, res) => {
-	console.log('body', res.body);
+	console.log('body', req.body);
 	const blogschema = new Blogschema(req.body);
 	blogschema.save((err, blogschema) => {
 		if (err) {
 			return res.status(500).json(err);
 		}
-		res.json(blogschema);
+		res.status(200).json(blogschema);
 	});
 });
   

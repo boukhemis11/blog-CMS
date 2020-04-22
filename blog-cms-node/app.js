@@ -25,6 +25,7 @@ mongoose.connect('mongodb://localhost:27017/blog', {useNewUrlParser:true});
 connection.on('error', (err) => {
 	console.log(`connection to mongoDB error: ${err.message}`);
 });
+
 connection.once('open', () => {
 	console.log('connected to mongoDB');
 	app.listen(app.get('port'), () => {
