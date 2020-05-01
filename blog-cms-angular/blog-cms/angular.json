@@ -119,5 +119,8 @@
       }
     }
   },
-  "defaultProject": "blog-cms"
+  "defaultProject": "blog-cms",
+  "cli": {
+    "analytics": "8819cd08-d981-4947-834c-d79080c08373"
+  }
 }

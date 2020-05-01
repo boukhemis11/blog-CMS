@@ -8,7 +8,7 @@ import { AdminComponent } from './admin/admin.component';
 import { BlogpostCreateComponent } from './blogpost-create/blogpost-create.component';
 
 const routes: Routes = [
-  { path: 'blogpost', component: BlogpostListComponent },
+  { path: 'blogposts', component: BlogpostListComponent },
   { path: 'blogpost/:id', component: BlogpostComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'blogpost-create', component: BlogpostCreateComponent },

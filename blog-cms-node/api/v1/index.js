@@ -10,7 +10,7 @@ router.get('/ping', (req, res) => {
 router.get('/blog-posts', (req, res) => {
 	Blogschema.find()
 		.sort({'created': -1})
-		//.exec()
+		.exec()
 		.then(blogschema => res.status(200).json(blogschema))
 		.catch(err => res.status(500).json({
 			message: 'blog post not found',
