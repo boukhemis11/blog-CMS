@@ -7,6 +7,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatSelectModule} from '@angular/material/select';
 import { MatInputModule } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material';
 
 @NgModule({
   declarations: [],
@@ -18,7 +19,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatListModule,
     MatSelectModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   exports: [
     MatToolbarModule,
@@ -27,7 +29,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatListModule,
     MatSelectModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule { }

@@ -2,7 +2,7 @@
 <mat-card *ngIf="(blogPost$ | async) as bp; else loading" class="blog-item">
     <mat-card-header  class="no-margin">
       <mat-card-title>{{ bp.title }}</mat-card-title>
-      <mat-card-subtitle>{{ bp.subTitle }}</mat-card-subtitle>
+      <mat-card-subtitle>{{ bp.subtitle }}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image [src]="bp.image" alt={{bp.title}}>
       <mat-card-content>

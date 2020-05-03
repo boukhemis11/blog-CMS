@@ -14,6 +14,7 @@ import { BlogpostListComponent } from './blogpost-list/blogpost-list.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AdminComponent } from './admin/admin.component';
 import { BlogpostCreateComponent } from './blogpost-create/blogpost-create.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BlogpostCreateComponent } from './blogpost-create/blogpost-create.compo
     ErrorPageComponent,
     AdminComponent,
     BlogpostCreateComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import { BlogpostCreateComponent } from './blogpost-create/blogpost-create.compo
     FormsModule,
     NgxEditorModule
   ],
+  entryComponents: [AlertComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
